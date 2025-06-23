@@ -1708,7 +1708,7 @@ Contact Page Style
   padding: 35px 30px;
   background-color: #fff;
   display: inline-block;
-  min-width: 448px  ;
+  min-width: 448px;
 }
 
 .contact-page .phone {
@@ -1828,6 +1828,10 @@ body {
 }
 
 @media (max-width: 992px) {
+  .header-area .main-nav .logo h1 {
+    font-size: 28px;    
+  }
+
   .sub-header {
     display: none;
   }
