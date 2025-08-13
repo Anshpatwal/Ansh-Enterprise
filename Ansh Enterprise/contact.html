@@ -162,11 +162,11 @@ https://templatemo.com/tm-591-villa-agency
             const message = document.getElementById("message").value;
 
             // ⚠ WARNING: Exposing API keys here is unsafe!
-            const RESEND_API_KEY = "YOUR_RESEND_API_KEY";
+            const RESEND_API_KEY = "re_df7tU5gc_7X5HosXQV47yqp8bL9zjiuWv";
 
             const emailData = {
-              from: "Your Website <noreply@yourdomain.com>",
-              to: "your@email.com",
+              from: "onboarding@resend.dev",
+              to: "anshpatwal2703@gmail.com",
               subject: subject || "New Contact Form Inquiry",
               html: `<h3>New Inquiry</h3>
            <p><strong>Name:</strong> ${name}</p>
@@ -178,7 +178,7 @@ https://templatemo.com/tm-591-villa-agency
               const res = await fetch("https://api.resend.com/emails", {
                 method: "POST",
                 headers: {
-                  "Authorization": `Bearer re_df7tU5gc_7X5HosXQV47yqp8bL9zjiuWv`,
+                  "Authorization":`Bearer ${RESEND_API_KEY}`,
                   "Content-Type": "application/json"
                 },
                 body: JSON.stringify(emailData)
